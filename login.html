@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUDENT PORTAL</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6rem;
+            background-color: white;
+        }
+
+
+
+        .container {
+            padding: 20px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .navbar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            background-color: rgb(79, 145, 189);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: larger;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+        }
+
+        .hoverlink:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .hoverlink:active {
+            color: rgb(144, 65, 65);
+        }
+
+        .contact {
+            background-color: rgb(23, 52, 80);
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .link-column h4 {
+            margin-bottom: 10px;
+        }
+
+        .about {
+            padding: 50px 20px;
+            background-color: #f0f0f0;
+            min-height: 200px;
+            margin-bottom: 10px;
+            display: contents;
+        }
+
+        .featuresbody {
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            color: black;
+            flex-wrap: wrap;
+        }
+
+        .featured-card {
+            flex-direction: column;
+            max-width: 30%;
+            margin-bottom: 35px;
+            color: black;
+        }
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        .hero {
+            height: 500px;
+            width: auto;
+            background: url('Corpus_Christi_College_New_Court,_Cambridge,_UK_-_Diliff.jpeg') no-repeat center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: last baseline;
+        }
+
+
+        .login {
+            background-color: rgba(142, 142, 142, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            min-width: 300px;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar flex">
+        <div class="image">
+            <img src="" alt="college logo" />
+        </div>
+        <div class="nav-items">
+            <ul class="nav-item">
+                <li><a href=".about" class="hoverlink" id="about">About</a></li>
+                <li><a href=".contact" class="hoverlink" id="contact">Contact</a></li>
+                <li><a href="#" class="hoverlink" id="login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero">
+
+        <div class="login flex">
+            <form action="login.php" method="post">
+                <h3>Login</h3><br><br>
+                <label for="username">
+                    <h4>Username</h4>
+                </label><br>
+                <input type="text" placeholder="username" name="username" required><br><br>
+                <label for="password">
+                    <h4>password</h4>
+                </label><br>
+                <input type="password" placeholder="password" name="password" required><br><br>
+                <button name="login">login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <h2>About Our Student Portal</h2>
+        <p style="margin-bottom: 30px;">Our Student Portal is designed to provide a centralized platform for students
+            and faculty to manage academic activities efficiently. From course enrollment to assignment submissions, the
+            portal simplifies day-to-day educational tasks.</p>
+
+        <div class="featuresbody flex">
+            <div class="featured-card flex">
+                <img src="Screenshot from 2025-05-12 16-44-53.png" alt="Dashboard Icon">
+                <h3 class="featur">Student Dashboard</h3>
+                <p>Get an overview of your academic progress, upcoming classes, and important announcements.</p>
+                <a href="#" class="secondarybutton">Explore</a>
+            </div>
+
+            <div class="featured-card flex">
+                <img src="Screenshot from 2025-05-12 16-47-26.png" alt="Course Icon">
+                <h3 class="featur">Course Management</h3>
+                <p>Enroll in courses, view curriculum, and stay up-to-date with your schedules.</p>
+                <a href="#" class="secondarybutton">View Courses</a>
+            </div>
+
+            <div class="featured-card flex">
+                <img src="Screenshot from 2025-05-12 16-48-22.png" alt="Assignment Icon">
+                <h3 class="featur">Assignments</h3>
+                <p>Submit assignments online, download resources, and track deadlines easily.</p>
+                <a href="#" class="secondarybutton">Submit Work</a>
+            </div>
+
+            <div class="featured-card flex">
+                <img src="Screenshot from 2025-05-12 16-49-46.png" alt="Grades Icon">
+                <h3 class="featur">Grades & Reports</h3>
+                <p>Access your marks, performance reports, and feedback from faculty.</p>
+                <a href="#" class="secondarybutton">Check Grades</a>
+            </div>
+
+            <div class="featured-card flex">
+                <img src="Screenshot from 2025-05-12 16-53-44.png" alt="Profile Icon">
+                <h3 class="featur">Profile Management</h3>
+                <p>Update your personal details, change password, and manage preferences.</p>
+                <a href="#" class="secondarybutton">Edit Profile</a>
+            </div>
+
+            <div class="featured-card flex">
+                <img src="Screenshot from 2025-05-12 16-51-54.png" alt="Support Icon">
+                <h3 class="featur">Help & Support</h3>
+                <p>Get assistance with portal-related issues or contact administration directly.</p>
+                <a href="#" class="secondarybutton">Contact Support</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact" id="contact">
+        <div class="item-left">
+            <h3>Contact Us</h3>
+        </div>
+        <div class="link-column">
+            <h4>Product</h4>
+            <a href="#" class="hoverlink">Overview</a>
+            <a href="#" class="hoverlink">Pricing</a>
+            <a href="#" class="hoverlink">Usability Hub</a>
+            <a href="#" class="hoverlink">More Info</a>
+        </div>
+        <div class="link-column">
+            <h4>Resources</h4>
+            <a href="#" class="hoverlink">Blog</a>
+            <a href="#" class="hoverlink">Docs</a>
+            <a href="#" class="hoverlink">FAQs</a>
+            <a href="#" class="hoverlink">Support</a>
+        </div>
+        <div class="link-column">
+            <h4>Company</h4>
+            <a href="#" class="hoverlink">About Us</a>
+            <a href="#" class="hoverlink">Careers</a>
+            <a href="#" class="hoverlink">Contact</a>
+            <a href="#" class="hoverlink">Privacy Policy</a>
+        </div>
+    </div>
+</body>
+<script>
+    const loginLink = document.querySelector('#login');
+    const loginForm = document.querySelector('.login');
+    const about = document.querySelector('.about');
+    const about1 = document.querySelector('#about');
+    const contact = document.querySelector('.contact');
+    const contact1 = document.querySelector('#contact');
+
+
+    loginLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.style.maxHeight = '700px';
+        loginForm.style.opacity = '1';
+        loginForm.style.visibility = 'visible';
+        about.style.display = 'none';
+        contact.style.display = 'none';
+
+    });
+
+    about1.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.style.maxHeight = '0px';
+        loginForm.style.opacity = '0';
+        loginForm.style.visibility = 'hidden';
+        about.style.display = 'contents';
+        contact.style.display = 'flex';
+    })
+
+    contact1.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.style.maxHeight = '0px';
+        loginForm.style.opacity = '0';
+        loginForm.style.visibility = 'hidden';
+        about.style.display = 'contents';
+        contact.style.display = 'flex';
+    })
+</script>
+
+
+</html>
