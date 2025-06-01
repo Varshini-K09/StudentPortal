@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student_Dashboard</title>
+  <script src="home.js" defer></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="nav-bar flex">
+    <div class="menu-icon" onclick="toggleSidebar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>    
+    <h2>Student Portfolio</h2>
+    <p id="exitbar"></p>
+  </div>
+
+  <div class="body flex">
+    <div class="sidebar-content flex">
+      <p class="hover-link" onclick="loadPage('dashboard.php')">Dashboard</p>
+      <p class="hover-link" onclick="loadPage('personal-info.php')">Personal Info</p>
+      <p class="hover-link" onclick="loadPage('education.php')">Education</p>
+      <p class="hover-link" onclick="loadPage('projects.php')">Projects</p>
+      <p class="hover-link" onclick="loadPage('preview.php')">Portfolio Preview</p>
+      <p class="hover-link logout" onclick="handleLogout()">Logout</p>
+
+    </div>
+
+    <div class="content" id="main-content">
+      <!-- dynamically adds the page!! -->
+    </div>
+  </div>
+</body>
+</html>
